@@ -1,0 +1,43 @@
+.wrapper {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #ffffff;
+  padding: 0 1rem;
+  background-color: transparent;
+  z-index: 30;
+}
+
+.logoWrapper {
+  text-align: center;
+  padding: .5rem;
+  cursor: pointer;
+}
+
+.logoWrapper svg{
+  width: 2.5rem;
+}
+
+.navList {
+  display: flex;
+  flex-direction: row;
+  align-items:flex-end;
+  font-size: var(--navFont);
+}
+
+.navList li{
+  padding-right: 1rem;
+  font-weight: var(--navWeight);
+  letter-spacing: var( --navSpacing);
+  transition: color .4s ease;
+  cursor: pointer;
+}
+
+.navList li:hover{
+  color: var(--accent);
+  transition: color .2s ease;
+
+}

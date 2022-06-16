@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,100;8..144,200;8..144,300;8..144,400;8..144,500;8..144,600;8..144,700;8..144,800;8..144,900&display=swap');
 
+:root {
+
+  /* colors */
+  --primary: #333533;
+  --secondary: #cccccc;
+  --text: #ffffff;
+  --accent: #ba5444;
+
+
+  /* font-sizes */
+  --navFont: 18px;
+
+  /* font-weights */
+  --navWeight: 300;
+
+  /* letter-spacings */
+  --navSpacing:.1rem;
+}
+
 html,
 body {
   padding: 0;
@@ -14,4 +33,14 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+h1 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
