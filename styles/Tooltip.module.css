@@ -1,0 +1,26 @@
+.wrapper {
+  padding: 1rem;
+  background-color: var(--secondary);
+}
+
+.list {
+  display:flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.list::before{
+  content: '';
+    display: block;
+    width: 0;
+    height: 0;
+    border-width: 0 0 10px;
+    border-style: solid;
+    border-right: solid 10px transparent;
+    border-left: solid 10px transparent;
+    position: absolute;
+    top: -10px;
+    left: 50%;
+    margin-left: -10px;
+}
