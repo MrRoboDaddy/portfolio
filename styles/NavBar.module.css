@@ -4,40 +4,60 @@
   width: 100vw;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-end;
   color: #ffffff;
-  padding: 0 1rem;
+  padding: 1rem 1rem;
   background-color: transparent;
   z-index: 30;
 }
 
 .logoWrapper {
   text-align: center;
-  padding: .5rem;
+  padding: 0;
   cursor: pointer;
+  color: var(--text);
+  fill: var(--text);
+  transition: fill .5s ease, color .5s ease;
+}
+
+.logoWrapper:hover {
+  color: var(--accent);
+  fill: var(--accent);
+  transition: fill .3s ease, color .3s ease;
 }
 
 .logoWrapper svg{
-  width: 2.5rem;
+  width: 2rem;
+  fill: inherit
 }
 
 .navList {
   display: flex;
   flex-direction: row;
-  align-items:flex-end;
+  align-items:center;
   font-size: var(--navFont);
 }
 
 .navList li{
-  padding-right: 1rem;
+  padding-left: 1rem;
   font-weight: var(--navWeight);
   letter-spacing: var( --navSpacing);
-  transition: color .4s ease;
+  transition: color .5s ease;
   cursor: pointer;
 }
 
 .navList li:hover{
   color: var(--accent);
-  transition: color .2s ease;
+  transition: color .3s ease;
+}
 
+.social {
+  fill: var(--text);
+  width: 25px;
+  transition: fill .5s ease;
+}
+
+.social:hover {
+  fill: var(--accent);
+  transition: fill .3s ease;
 }

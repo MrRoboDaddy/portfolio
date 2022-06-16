@@ -6,10 +6,10 @@ import styles from '../styles/Home.module.css';
 export default function Home() {
 
   const [overlay, setOverlay] = useState(false);
-
   useEffect(() => {
     const handleMouseMove = event => {
-      if (event.pageY <= 75) {
+      console.log(event.pageY);
+      if (event.pageY <= 95 && event.pageY > 2) {
         setOverlay(true);
       } else {
         setOverlay(false);
@@ -25,9 +25,9 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>RoboDaddy</title>
+        <title>MrRoboDaddy</title>
         <meta name="description" content="RoboDaaddy's Art Portfolio" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/paintbrush.svg" />
       </Head>
 
       <main className={styles.main}>
@@ -36,7 +36,7 @@ export default function Home() {
           height: '100vh',
           position: 'absolute',
           zIndex: 1,
-          background: overlay ? 'rgba(0,0,0,.50)' : 'transparent',
+          background: overlay ? 'rgba(0,0,0,.40)' : 'transparent',
           transition: 'background .3s ease'
         }} />
         <div className={styles.imgContainer}>
