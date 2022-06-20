@@ -8,7 +8,6 @@ export default function Home() {
   const [overlay, setOverlay] = useState(false);
   useEffect(() => {
     const handleMouseMove = event => {
-      console.log(event.pageY);
       if (event.pageY <= 95 && event.pageY > 2) {
         setOverlay(true);
       } else {

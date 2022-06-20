@@ -1,26 +1,39 @@
-.wrapper {
-  padding: 1rem;
-  background-color: var(--secondary);
-}
 
 .list {
+  background-color: var(--secondary);
+  position: absolute;
+  z-index: 1100;
+  margin-top: 4.4rem;
   display:flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  padding: 2rem 1rem 1rem 1rem;
+  color: var(--secondary);
+  width: max-content;
+  border: 0;
 }
 
 .list::before{
   content: '';
-    display: block;
-    width: 0;
-    height: 0;
-    border-width: 0 0 10px;
-    border-style: solid;
-    border-right: solid 10px transparent;
-    border-left: solid 10px transparent;
-    position: absolute;
-    top: -10px;
-    left: 50%;
-    margin-left: -10px;
+  display: block;
+  width: 0;
+  height: 0;
+  border-width: 0 0 10px;
+  border-style: solid;
+  border-right: solid 10px transparent;
+  border-left: solid 10px transparent;
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  margin-left: -10px;
+}
+
+.child {
+  color: var(--primary);
+  font-size: var( --navFont);
+  font-weight: var(--navWeight);
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-top: 1rem;
 }
