@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
 
-import styles from '../../styles/NavItem.module.css';
+import styles from '../../styles/Underline.module.css';
 
-export default function NavItem({ children }) {
+export default function Underline({ children }) {
 
   const parVariant = {
     hidden: {},
@@ -12,16 +12,16 @@ export default function NavItem({ children }) {
   const hovVariant = {
     hidden: {
       opacity: 0,
-      y: 7,
+      y: 6,
       scale: 0.5,
     },
     hover: {
       opacity: 1,
-      y: 5,
+      y: 4,
       scale: 1,
       transition: {
         type: "spring",
-        bounce: 0.3,
+        bounce: 0.5,
         duration: 0.3
       }
     }
