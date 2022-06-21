@@ -12,12 +12,12 @@ export default function Underline({ children }) {
   const hovVariant = {
     hidden: {
       opacity: 0,
-      y: 6,
+      y: 5,
       scale: 0.5,
     },
     hover: {
       opacity: 1,
-      y: 4,
+      y: 3,
       scale: 1,
       transition: {
         type: "spring",

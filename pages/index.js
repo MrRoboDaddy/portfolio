@@ -1,9 +1,25 @@
 import Head from 'next/head';
 import { useState, useEffect } from 'react';
+import { createClient } from 'contentful';
+import NavBar from '../components/NavBar';
 
 import styles from '../styles/Home.module.css';
 
-export default function Home() {
+export async function getStaticProps() {
+
+  const client = createClient({
+    space: process.env.CONTENTFUL_SPACE_ID,
+    accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
+  });
+
+  const res = await client.getEntries({ order: 'sys.createdAt', content_type: 'navItem' });
+
+  return {
+    props: { navItems: res.items }
+  };
+}
+
+export default function Home({ navItems }) {
 
   const [overlay, setOverlay] = useState(false);
   useEffect(() => {
@@ -30,6 +46,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <NavBar navItems={navItems} />
         <div style={{
           width: '100vw',
           height: '100vh',

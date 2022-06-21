@@ -5,8 +5,8 @@ import styles from '../../styles/Tooltip.module.css';
 
 export default function Tooltip({
   visible,
-  children,
-  url
+  tooltipItems,
+  tooltipUrl
 }) {
 
   const wrapVariant = {
@@ -25,17 +25,10 @@ export default function Tooltip({
     hidden: {
       y: 0,
       opacity: 1,
-      // transition: {
-      //   y: { stiffness: 1000 }
-      // }
     },
     show: {
-      y: -20,
+      y: -10,
       opacity: 1,
-      // transition: {
-      //   y: { stiffness: 1000 }
-      // }
-
     }
   };
 
@@ -51,18 +44,25 @@ export default function Tooltip({
           animate={'show'}
           layout
         >
-          {children.map((child, i) => (
+          {tooltipItems.map((item, i) => (
             <motion.li
+              key={i}
               variants={childVariants}
               layout
+              className={styles.tooltipLi}
             >
               <Underline
                 key={i}
               >
                 <Link
-                  href={'https://www.instagram.com/rdemoss_art/'}
+                  href={tooltipUrl[i]}
                 >
-                  <p className={styles.child}>{child}</p>
+                  <a
+                    target='_blank'
+                    className={styles.child}
+                  >
+                    {item}
+                  </a>
                 </Link>
               </Underline>
             </motion.li>
