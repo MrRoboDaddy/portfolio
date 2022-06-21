@@ -1,9 +1,10 @@
 import Underline from './animations/Underline';
 import NavItem from './NavItem';
 import Link from 'next/link';
+
 import styles from '../styles/NavBar.module.css';
 
-export default function NavBar() {
+export default function NavBar({ navItems }) {
   return (
     <nav className={styles.wrapper}>
       <div className={styles.logoWrapper}>
@@ -19,9 +20,20 @@ export default function NavBar() {
       </div>
       <div>
         <ul className={styles.navList}>
-          <li><NavItem>Portfolio</NavItem></li>
-          <li><NavItem>Store</NavItem></li>
-          <li><NavItem>Contact</NavItem></li>
+          {
+            navItems.map(item =>
+              <li
+                key={item.sys.id}
+              >
+                <NavItem
+                  tooltipItems={item.fields.tooltipItems}
+                  tooltipUrl={item.fields.tooltipUrl}
+                >
+                  {item.fields.category}
+                </NavItem>
+              </li>
+            )
+          }
           <li>
             <Underline>
               <Link href='https://www.instagram.com/rdemoss_art/'>

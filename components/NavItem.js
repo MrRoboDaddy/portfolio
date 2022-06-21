@@ -4,7 +4,11 @@ import { useState } from "react";
 
 import styles from '../styles/NavItem.module.css';
 
-export default function NavItem({ children }) {
+export default function NavItem({
+  children,
+  tooltipItems,
+  tooltipUrl
+}) {
 
   const [visible, setVisible] = useState(false);
 
@@ -19,7 +23,8 @@ export default function NavItem({ children }) {
       </Underline>
       <Tooltip
         visible={visible}
-        children={['My Art', 'Artstation', 'Deviant Art']}
+        tooltipItems={tooltipItems}
+        tooltipUrl={tooltipUrl}
       />
     </div>
   );

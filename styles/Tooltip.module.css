@@ -8,10 +8,14 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  padding: 2rem 1rem 1rem 1rem;
+  padding: 2rem;
   color: var(--secondary);
   width: max-content;
   border: 0;
+}
+
+.tooltipLi {
+  padding-left: 0rem !important;
 }
 
 .list::before{
@@ -33,7 +37,7 @@
   color: var(--primary);
   font-size: var( --navFont);
   font-weight: var(--navWeight);
-  margin-bottom: 0;
-  margin-top: 0;
+  margin: 0;
   padding-top: 1rem;
+
 }
