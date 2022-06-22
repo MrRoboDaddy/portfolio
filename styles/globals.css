@@ -11,12 +11,15 @@
 
   /* font-sizes */
   --navFont: 18px;
+  --catFont: 38px;
 
   /* font-weights */
   --navWeight: 300;
+  --catWeight: 700;
 
   /* letter-spacings */
   --navSpacing:.1rem;
+  --catSpacing:.13rem;
 }
 
 html,

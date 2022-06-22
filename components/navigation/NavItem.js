@@ -1,8 +1,8 @@
-import Underline from "./animations/Underline";
-import Tooltip from "./animations/Tooltip";
+import Underline from "../animations/Underline";
+import Tooltip from "../animations/Tooltip";
 import { useState } from "react";
 
-import styles from '../styles/NavItem.module.css';
+import styles from '../../styles/NavItem.module.css';
 
 export default function NavItem({
   children,

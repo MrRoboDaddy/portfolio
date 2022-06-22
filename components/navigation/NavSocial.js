@@ -1,6 +1,6 @@
 import Link from 'next/link';
-import NavItem from "./animations/NavItem";
-import styles from '../styles/NavSocial.module.css';
+import NavItem from "../animations/NavItem";
+import styles from '../../styles/NavSocial.module.css';
 
 export default function NavSocial({ children, href }) {
   return (

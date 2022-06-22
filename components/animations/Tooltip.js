@@ -58,7 +58,7 @@ export default function Tooltip({
                   href={tooltipUrl[i]}
                 >
                   <a
-                    target='_blank'
+                    // target='_blank'
                     className={styles.child}
                   >
                     {item}
