@@ -23,7 +23,7 @@ export async function getStaticProps() {
 }
 
 export default function MyArt({ navItems, artItems }) {
-  console.log(artItems);
+
   return (
     <Layout
       navItems={navItems}
