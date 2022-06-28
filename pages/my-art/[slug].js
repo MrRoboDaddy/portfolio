@@ -1,7 +1,9 @@
 import Layout from "../../components/layout/Layout";
 import GallCard from "../../components/cards/GallCard";
+import MotionGall from "../../components/animations/MotionGall";
+import { useState } from "react";
 import { createClient } from "contentful";
-import Image from "next/image";
+import { motion, AnimatePresence } from "framer-motion";
 
 import styles from '../../styles/Gallery.module.css';
 
@@ -49,23 +51,54 @@ export async function getStaticProps({ params }) {
 
 export default function Gallery({ navItems, artItems }) {
 
+  const [gallI, setGallI] = useState(null);
+  const [visible, setVisible] = useState(false);
+
   const { gallery } = artItems[0].fields;
+  const { category } = artItems[0].fields;
+
+  const toggleGall = () => {
+    setVisible(!visible);
+  };
+
+  const setGall = (i) => {
+    setGallI(i);
+  };
 
   return (
     <Layout
       navItems={navItems}
     >
-      <div className={styles.wrapper}>
-        <div className={styles.container}>
+      <MotionGall
+        gallery={gallery}
+        hideGall={toggleGall}
+        visible={visible}
+        gallI={gallI}
+      />
+      <div
+        className={styles.wrapper}
+        style={{ overflowY: visible ? 'hidden' : 'scroll' }}
+      >
+        <h1
+          className={styles.category}
+        >
+          {category}
+        </h1>
+        <motion.div
+          className={styles.container}
+        >
           {
-            gallery.map(image =>
+            gallery.map((item, i) =>
               <GallCard
-                key={image.sys.id}
-                art={image}
+                i={i}
+                key={item.sys.id}
+                art={item}
+                showGall={toggleGall}
+                setGall={setGall}
               />
             )
           }
-        </div>
+        </motion.div>
       </div>
     </Layout>
   );

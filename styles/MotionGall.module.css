@@ -1,0 +1,73 @@
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgba(0,0,0,.96);
+  z-index: 1000;
+}
+
+ 
+.exit,
+.next,
+.prev {
+  top: calc(50% - 20px);
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  cursor: pointer;
+  font-weight: bold;
+  text-align: center;
+  font-size: 28px;
+  z-index: 2;
+}
+
+.exit {
+  top: 40px;
+  right: 60px;
+  color: var(--accent)
+}
+
+.next {
+  right: 10px;
+  color: var(--primary);
+}
+
+.prev {
+  left: 10px;
+  transform: scale(-1);
+  color: var(--primary);
+}
+
+.image {
+  object-fit: contain;
+}
+
+.imageContainer {
+  position: relative;
+  max-height: 90vh;
+  height: 90vh;
+  width: 100%;
+  max-width: 100%;
+}
+
+.refresh {
+  padding: 10px;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+  width: 20px;
+  height: 20px;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}

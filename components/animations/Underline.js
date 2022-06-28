@@ -2,7 +2,9 @@ import { motion } from "framer-motion";
 
 import styles from '../../styles/Underline.module.css';
 
-export default function Underline({ children }) {
+export default function Underline({
+  children,
+  color = 'text' }) {
 
   const parVariant = {
     hidden: {},
@@ -36,7 +38,11 @@ export default function Underline({ children }) {
     >
       {children}
       <motion.div
-        className={styles.underline}
+        style={{
+          width: '100%',
+          height: ' 1px',
+          backgroundColor: `var(--${color})`,
+        }}
         variants={hovVariant}></motion.div>
     </motion.div>
   );
