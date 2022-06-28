@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
 import Layout from '../components/layout/Layout';
-import NavBar from '../components/navigation/NavBar';
 
 import styles from '../styles/Home.module.css';
 
