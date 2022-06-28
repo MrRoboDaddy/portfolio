@@ -4,7 +4,6 @@
   width: fit-content;
   max-height: 400px;
   overflow: hidden;
-  border-radius: 15px;
 }
 
 .category {
@@ -14,14 +13,14 @@
   transform: translate(-50%, -50%);
   z-index: 100;
   width: fit-content;
-  color: var(--text);
+  color: var(--primary);
   font-size: var(--catFont);
   letter-spacing: var(--catSpacing);
   font-weight: var(--catWeight);
 }
 
 .container:hover .overlay{
-  background: rgba(0,0,0,.60);
+  background: rgba(0,0,0,.50);
   transition: background .3s ease
 }
 

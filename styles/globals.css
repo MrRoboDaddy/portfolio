@@ -3,15 +3,16 @@
 :root {
 
   /* colors */
-  --primary: #333533;
+  --primary: #ffffff;
   --secondary: #cccccc;
-  --text: #ffffff;
-  --accent: #ba5444;
+  --text: #0b0b0b;
+  --accent: rgb(246, 81, 75) ;
 
 
   /* font-sizes */
   --navFont: 18px;
   --catFont: 38px;
+  --gallFont: 58px;
 
   /* font-weights */
   --navWeight: 300;

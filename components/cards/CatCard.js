@@ -8,7 +8,7 @@ export default function CatCard({ item }) {
   const { category, slug, thumbnail } = item.fields;
   return (
     <motion.div
-      whileHover={{ y: -10, transition: .3 }}
+      whileHover={{ y: -8, transition: .3 }}
       className={styles.container}
     >
 
@@ -18,15 +18,19 @@ export default function CatCard({ item }) {
           <h1
             className={styles.category}
           >
-            <Underline>{category}</Underline>
+            <Underline
+              color={'primary'}
+            >
+              {category}
+            </Underline>
           </h1>
           <Image
             src={`https:${thumbnail.fields.file.url}`}
+            priority
             width={450}
             height={450}
             blurDataURL
-            placeholder='blur'
-            priority
+            placeholder='color'
             className={styles.image}
           />
         </div>

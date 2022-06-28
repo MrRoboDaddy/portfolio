@@ -53,12 +53,12 @@ export default function Tooltip({
             >
               <Underline
                 key={i}
+                color={'primary'}
               >
                 <Link
                   href={tooltipUrl[i]}
                 >
                   <a
-                    // target='_blank'
                     className={styles.child}
                   >
                     {item}
