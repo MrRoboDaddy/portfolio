@@ -7,7 +7,8 @@ import styles from '../../styles/NavItem.module.css';
 export default function NavItem({
   children,
   tooltipItems,
-  tooltipUrl
+  tooltipUrl,
+  color
 }) {
 
   const [visible, setVisible] = useState(false);
@@ -17,14 +18,18 @@ export default function NavItem({
       onMouseOver={() => setVisible(true)}
       onMouseLeave={() => setVisible(false)}
       className={styles.container}
+
     >
-      <Underline>
+      <Underline
+        color={color}
+      >
         {children}
       </Underline>
       <Tooltip
         visible={visible}
         tooltipItems={tooltipItems}
         tooltipUrl={tooltipUrl}
+        secondary={color}
       />
     </div>
   );

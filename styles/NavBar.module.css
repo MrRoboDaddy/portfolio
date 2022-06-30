@@ -61,3 +61,14 @@
   fill: var(--accent);
   transition: fill .3s ease;
 }
+
+.socialSecondary {
+  fill: var(--primary);
+  width: 25px;
+  transition: fill .5s ease;
+}
+
+.socialSecondary:hover {
+  fill: var(--accent);
+  transition: fill .3s ease;
+}

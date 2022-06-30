@@ -12,6 +12,10 @@
   color: var(--text);
   width: max-content;
 }
+.listSecondary {
+  background-color: var(--primary);
+  color: var(--primary)
+}
 
 .tooltipLi {
   padding-left: 0rem !important;
@@ -38,5 +42,8 @@
   font-weight: var(--navWeight);
   margin: 0;
   padding-top: 1rem;
+}
 
+.childSecondary {
+  color: var(--text);
 }

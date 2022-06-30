@@ -6,7 +6,8 @@ import styles from '../../styles/Tooltip.module.css';
 export default function Tooltip({
   visible,
   tooltipItems,
-  tooltipUrl
+  tooltipUrl,
+  secondary = false
 }) {
 
   const wrapVariant = {
@@ -37,7 +38,7 @@ export default function Tooltip({
       {
         visible &&
         <motion.ul
-          className={styles.list}
+          className={secondary ? `${styles.list} ${styles.listSecondary}` : styles.list}
           exit={{ opacity: 0, y: -25, transition: { duration: .2 } }}
           variants={wrapVariant}
           intitial={'hidden'}
@@ -53,13 +54,13 @@ export default function Tooltip({
             >
               <Underline
                 key={i}
-                color={'primary'}
+                color={secondary ? 'text' : 'primary'}
               >
                 <Link
                   href={tooltipUrl[i]}
                 >
                   <a
-                    className={styles.child}
+                    className={secondary ? `${styles.child} ${styles.childSecondary}` : styles.child}
                   >
                     {item}
                   </a>
