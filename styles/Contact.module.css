@@ -1,6 +1,22 @@
+.wrapper {
+  padding: 10rem 0rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.seperator {
+  width: 120%;
+  height: 1px;
+  margin-top: 40px;
+  background-color: var(--text);
+}
+
 .form {
-  max-width: 1300px;
-  margin: 100px auto;
+  max-width: 475px;
+  margin: 40px auto 0px auto;
 }
 
 .form h1 {
@@ -29,7 +45,7 @@
   border: 1px solid var(--secondary);
   padding: 10px 15px;
   margin-bottom: 40px;
-  font-size: 18px;
+  font-size: var(--contactFont);
 }
 
 .form label {
@@ -51,7 +67,7 @@
   border: 1px solid var(--text);;
   margin-top: 40px;
   padding: 20px;
-  font-size: 28px;
+  font-size: var(--contactFont);
   font-weight: 100;
   letter-spacing: 10px;
   cursor: pointer;
@@ -72,6 +88,10 @@
   transform: translateY(3px);
   border: 1px solid var(--accent);
   opacity: 0.8;
+}
+
+.form input:focus {
+  outline-color: var(--text);
 }
 
 .form input:disabled {
@@ -105,12 +125,36 @@
 }
 
 .form textarea {
-  width: 100%;
-  min-height: 80px;
+  width: 475px;
+  min-height: 150px;
+  font-family: inherit;
+  font-size: var(--contactFont);
+  padding: 10px 20px;
+  margin-bottom: 40px;
+}
+
+.form textarea:focus {
+  outline-color: var(--text);
 }
 
 .name {
   display: flex;
   flex-direction: row;
+  justify-content: space-between;
   min-width: fit-content;
+}
+
+.name input {
+  width: 100%;
+}
+
+.submit{
+  margin-top: 0px;
+}
+
+.email{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }

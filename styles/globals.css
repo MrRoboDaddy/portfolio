@@ -13,7 +13,11 @@
   --navFont: 18px;
   --catFont: 38px;
   --gallFont: 58px;
+  --contactFont: 18px;
 
+  /* mobile font-sizes */
+  --mobContactFont: 14px;
+  
   /* font-weights */
   --navWeight: 300;
   --catWeight: 700;

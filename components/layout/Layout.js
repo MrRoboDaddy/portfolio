@@ -7,7 +7,8 @@ export default function Layout({
   title,
   description,
   image,
-  navItems
+  navItems,
+  color
 }) {
   return (
     <div className={styles.container}>
@@ -18,6 +19,7 @@ export default function Layout({
       />
       <main className={styles.main}>
         <NavBar
+          color={color}
           navItems={navItems}
         />
         {children}

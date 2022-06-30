@@ -1,5 +1,5 @@
-import { useState, useEffect } from 'react';
 import { createClient } from 'contentful';
+import Image from 'next/image';
 import Layout from '../components/layout/Layout';
 
 import styles from '../styles/Home.module.css';
@@ -11,43 +11,34 @@ export async function getStaticProps() {
     accessToken: process.env.CONTENTFUL_ACCESS_TOKEN,
   });
 
-  const res = await client.getEntries({ order: 'fields.date', content_type: 'navItem' });
+  const nav = await client.getEntries({ order: 'fields.date', content_type: 'navItem' });
+  const art = await client.getEntries({ content_type: 'homeImage' });
 
   return {
-    props: { navItems: res.items }
+    props: {
+      navItems: nav.items,
+      homeImage: art.items
+    }
   };
 }
 
-export default function Home({ navItems }) {
-
-  const [overlay, setOverlay] = useState(false);
-  // useEffect(() => {
-  //   const handleMouseMove = event => {
-  //     if (event.pageY <= 95 && event.pageY > 2) {
-  //       setOverlay(true);
-  //     } else {
-  //       setOverlay(false);
-  //     }
-  //   };
-  //   window.addEventListener('mousemove', handleMouseMove);
-  //   return () => {
-  //     window.removeEventListener('mousemove', handleMouseMove);
-  //   };
-  // }, []);
-
+export default function Home({ navItems, homeImage }) {
+  const { url } = homeImage[0].fields.image.fields.file;
+  const { title } = homeImage[0].fields.image.fields;
 
   return (
-    <Layout navItems={navItems} >
-      {/* <div style={{
-        width: '100vw',
-        height: '100vh',
-        position: 'absolute',
-        zIndex: 1,
-        background: overlay ? 'rgba(0,0,0,.40)' : 'transparent',
-        transition: 'background .3s ease'
-      }} /> */}
+    <Layout
+      navItems={navItems}
+      color={'primary'}
+    >
       <div className={styles.imgContainer}>
-        <div className={styles.mainImage} />
+        <Image
+          priority
+          src={`https:${url}`}
+          alt={title}
+          layout='fill'
+          className={styles.mainImage}
+        />
       </div>
     </Layout>
   );
