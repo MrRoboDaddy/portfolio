@@ -16,6 +16,9 @@
   --contactFont: 18px;
 
   /* mobile font-sizes */
+  --mobNavLinkFont: 38px;
+  --mobSubNavLinkFont: 22px;
+  --mobcatFont: 32px;
   --mobContactFont: 14px;
   
   /* font-weights */

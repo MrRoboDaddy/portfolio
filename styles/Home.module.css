@@ -10,9 +10,16 @@
 
 .mainImage {
   object-fit: cover;
+  object-position: 20%;
 }
 
 .logo {
   height: 1em;
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 500px) {
+  .mainImage {
+    object-position: 24%;
+  }
 }

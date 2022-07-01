@@ -17,6 +17,7 @@
   font-size: var(--catFont);
   letter-spacing: var(--catSpacing);
   font-weight: var(--catWeight);
+  text-align: center;
 }
 
 .container:hover .overlay{

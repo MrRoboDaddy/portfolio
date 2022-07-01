@@ -1,6 +1,7 @@
 import Underline from '../animations/Underline';
 import NavItem from './NavItem';
 import Link from 'next/link';
+import MobileNav from './MobileNav';
 
 import styles from '../../styles/NavBar.module.css';
 
@@ -90,6 +91,7 @@ export default function NavBar({
           </li>
         </ul>
       </div>
-    </nav >
+      <MobileNav navItems={navItems} />
+    </nav>
   );
 }

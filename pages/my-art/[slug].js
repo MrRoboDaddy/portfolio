@@ -3,7 +3,7 @@ import GallCard from "../../components/cards/GallCard";
 import MotionGall from "../../components/animations/MotionGall";
 import { useState } from "react";
 import { createClient } from "contentful";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import styles from '../../styles/Gallery.module.css';
 

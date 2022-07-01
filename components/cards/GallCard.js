@@ -35,7 +35,6 @@ export default function GallCard({ art, showGall, i, setGall }) {
         className={styles.image}
         onLoad={event => {
           const target = event.target;
-
           // next/image use an 1x1 px git as placeholder. We only want the onLoad event on the actual image
           if (target.src.indexOf('data:image/gif;base64') < 0) {
             setImageIsLoaded(true);
