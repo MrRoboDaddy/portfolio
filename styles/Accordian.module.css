@@ -1,0 +1,10 @@
+.catContainer{
+  max-width:fit-content;
+  text-align: center;
+}
+
+.category {
+  font-size: var(--mobNavLinkFont);
+  letter-spacing: var(--catSpacing);
+  transition: color .5s ease;
+}

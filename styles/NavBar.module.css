@@ -6,14 +6,14 @@
   justify-content: space-between;
   align-items: flex-end;
   color: var(--text);
-  padding: 1.5rem 2.3rem;
+  padding: 1.5rem 0rem;
   background-color: transparent;
   z-index: 300;
 }
 
 .logoWrapper {
   text-align: center;
-  padding: 0;
+  padding-left: 2.3rem;
   cursor: pointer;
   color: var(--secondary);
   fill: var(--secondary);
@@ -36,6 +36,7 @@
   flex-direction: row;
   align-items:center;
   font-size: var(--navFont);
+  padding-right: 2.3rem;
 }
 
 .navList li{
@@ -71,4 +72,24 @@
 .socialSecondary:hover {
   fill: var(--accent);
   transition: fill .3s ease;
+}
+
+@media screen and (max-width: 600px) {
+  .navList {
+    display: none;
+  }
+
+  .wrapper {
+    padding: 0rem;
+  }
+
+  .logoWrapper {
+    padding-top: 1.5rem;
+    position: fixed;
+    z-index: 1000;
+    top:0;
+  }
+  .logoWrapper h1{
+    font-size: 20px;
+  }
 }

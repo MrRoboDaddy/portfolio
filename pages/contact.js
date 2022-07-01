@@ -77,43 +77,43 @@ export default function Contact({ navItems }) {
         }}
       />
       <div className={styles.wrapper}>
-        <h1>
-          Contact
-        </h1>
-        <div className={styles.seperator} />
-        {!submitted ?
-          <form
-            onSubmit={handleSubmit(onSubmit)}
-            className={styles.form}
-          >
-            <div className={styles.name}>
-              <div>
-                <input type="text" placeholder="First name *" {...register("firstName", { required: 'This field is required', maxLength: 80 })} />
-                {errors.firstName && <p>This field is required</p>}
 
-              </div>
-              <div>
-                <input type="text" placeholder="Last name *" {...register("lastName", { required: 'This field is required', maxLength: 100 })} />
-                {errors.lastName && <p>This field is required</p>}
+        {
+          !submitted ?
+            <>
+              <h1>
+                Contact
+              </h1><div className={styles.seperator} /><form
+                onSubmit={handleSubmit(onSubmit)}
+                className={styles.form}
+              >
+                <div className={styles.name}>
+                  <div>
+                    <input type="text" placeholder="First name *" {...register("firstName", { required: 'This field is required', maxLength: 80 })} />
+                    {errors.firstName && <p>This field is required</p>}
 
-              </div>
-            </div>
-            <input type="text" placeholder="Email *" {...register("email", { required: 'This field is required', pattern: /^\S+@\S+$/i })} />
-            {errors.email?.type === 'required' && <p>This field is required</p>}
-            {errors.email?.type === 'pattern' && <p>A valid email address is required</p>}
-            <input type="text" placeholder="Subject *" {...register("subject", { required: 'This field is required' })} />
-            {errors.subject && <p>This field is required</p>}
-            <textarea placeholder="Message *"{...register("message", { required: 'This field is required' })} />
-            {errors.message && <p>This field is required</p>}
-            <input type="submit" style={{ marginTop: '0px' }} />
-            <div className={styles.email}><strong>Email</strong>:{" "}rdemoss.media@gmail.com</div>
-          </form>
-          :
-          <h1>Thank you!</h1>
+                  </div>
+                  <div>
+                    <input type="text" placeholder="Last name *" {...register("lastName", { required: 'This field is required', maxLength: 100 })} />
+                    {errors.lastName && <p>This field is required</p>}
+
+                  </div>
+                </div>
+                <input type="text" placeholder="Email *" {...register("email", { required: 'This field is required', pattern: /^\S+@\S+$/i })} />
+                {errors.email?.type === 'required' && <p>This field is required</p>}
+                {errors.email?.type === 'pattern' && <p>A valid email address is required</p>}
+                <input type="text" placeholder="Subject *" {...register("subject", { required: 'This field is required' })} />
+                {errors.subject && <p>This field is required</p>}
+                <textarea placeholder="Message *" {...register("message", { required: 'This field is required' })} />
+                {errors.message && <p>This field is required</p>}
+                <input type="submit" style={{ marginTop: '0px' }} />
+                <div className={styles.email}><strong>Email</strong>:{" "}rdemoss.media@gmail.com</div>
+              </form>
+            </>
+            :
+            <h1>Thank you!</h1>
         }
-
       </div>
-
     </Layout>
   );
 }

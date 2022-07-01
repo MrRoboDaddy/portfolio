@@ -18,7 +18,7 @@ export default async (req, res) => {
   `;
 
   const data = {
-    to: 'rdemoss.media@gmail.com',
+    to: 'jakobbergeson.dev@gmail.com',
     from: 'robodaddyportfolio@gmail.com',
     subject: `New message from ${body.name}`,
     text: message,
@@ -28,4 +28,5 @@ export default async (req, res) => {
   await mail.send(data);
 
   res.status(200).json({ status: 'OK' });
+  // rdemoss.media@gmail.com
 };

@@ -4,7 +4,9 @@ import styles from '../../styles/Underline.module.css';
 
 export default function Underline({
   children,
-  color = 'text' }) {
+  color = 'text',
+  active = false
+}) {
 
   const parVariant = {
     hidden: {},
@@ -35,6 +37,7 @@ export default function Underline({
       varaints={parVariant}
       initial={'hidden'}
       whileHover={'hover'}
+      animate={active ? 'hover' : 'hidden'}
     >
       {children}
       <motion.div

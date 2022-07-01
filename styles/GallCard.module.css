@@ -18,3 +18,10 @@
     max-height: 350px;
   }
 }
+
+@media screen and (max-width: 500px) {
+  .container {
+    height: 250px;
+    max-height: 350px;
+  }
+}

@@ -29,7 +29,7 @@
 
 .form p {
   color: var(--accent);
-  margin: -20px auto 10px auto;
+  margin: -30px auto 10px auto;
 }
 
 .form p::before {
@@ -157,4 +157,38 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .seperator {
+    width: 100%;
+  }
+
+}
+
+@media screen and (max-width: 500px) {
+
+  .wrapper {
+    width: 100%;
+  }
+
+  .seperator {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%
+  }
+
+  .form input{
+    font-size: var(--mobContactFont);
+  }
+  
+  .name {
+    flex-direction: column;
+  }
+
+  .form textarea {
+    width: 100%;
+  }
 }
