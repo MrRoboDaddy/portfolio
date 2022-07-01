@@ -51,7 +51,7 @@ export async function getStaticProps({ params }) {
 
 export default function Gallery({ navItems, artItems }) {
 
-  const [gallI, setGallI] = useState(null);
+  const [gallI, setGallI] = useState(0);
   const [visible, setVisible] = useState(false);
 
   const { gallery } = artItems[0].fields;
